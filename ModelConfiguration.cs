@@ -9,5 +9,6 @@ public class ModelConfiguration : IEntityTypeConfiguration<Model>
     {
         builder.ToTable("DemoDb");
         builder.HasKey(x => x.Id);
+        builder.Property(x => x.Uids).HasField("_uids");
     }
 }
